@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Support System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Customer Support System</h1>
+        <p>We are here to help you</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#create">Create Ticket</a>
+        <a href="/tickets">View Tickets</a>
+    </nav>
+
+    <section class="welcome">
+        <h2>Welcome to Customer Support</h2>
+        <p>Submit your problem and our team will help you.</p>
+    </section>
+
+    <section id="create">
+        <h2>Create New Ticket</h2>
+
+        <form action="/create" method="POST">
+
+            <label>Customer Name</label>
+            <input type="text" name="name"
+                   placeholder="Enter your name" required>
+
+            <label>Email Address</label>
+            <input type="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label>Problem Subject</label>
+            <input type="text" name="subject"
+                   placeholder="Enter subject" required>
+
+            <label>Problem Description</label>
+            <textarea name="description"
+                      placeholder="Describe your problem"
+                      required></textarea>
+
+            <label>Priority</label>
+            <select name="priority">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+            <button type="submit">Submit Ticket</button>
+
+        </form>
+    </section>
+
+    <section class="search">
+        <h2>Search Your Ticket</h2>
+
+        <form action="/search" method="POST">
+
+            <label>Enter Ticket ID</label>
+            <input type="number" name="ticket_id"
+                   placeholder="Enter ticket ID" required>
+
+            <button type="submit">Search Ticket</button>
+
+        </form>
+    </section>
+
+    <section class="update">
+        <h2>Update Ticket Status</h2>
+
+        <form action="/update" method="POST">
+
+            <label>Ticket ID</label>
+            <input type="number" name="ticket_id"
+                   placeholder="Enter ticket ID" required>
+
+            <label>New Status</label>
+            <select name="status">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Resolved</option>
+            </select>
+
+            <button type="submit">Update Status</button>
+
+        </form>
+    </section>
+
+    <section class="view">
+        <h2>Manage Customer Tickets</h2>
+        <p>Click below to see all customer tickets.</p>
+        <a class="view-button" href="/tickets">
+            View All Tickets
+        </a>
+    </section>
+
+    <footer>
+        <p>Customer Support Ticket Management System</p>
+        <p>Created using HTML, CSS and C++</p>
+    </footer>
+
+</body>
+</html>
